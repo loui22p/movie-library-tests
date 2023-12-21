@@ -44,7 +44,7 @@
             <label for="coment">Join the discussion</label>
             <br>
             <input id="comment" name="comment" type="text" placeholder="Comment" size="60%" style="color: black">
-            <input type="submit" name="submit" value="Submit">
+            <input dusk="submit" type="submit" name="submit" value="Submit">
         </form>
         @endauth
         @endif
