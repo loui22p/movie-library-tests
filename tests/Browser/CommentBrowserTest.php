@@ -36,7 +36,8 @@ class CommentBrowserTest extends DuskTestCase
                     ->visit('/movie/1')
                     ->press('submit')
                     ->waitForDialog()
-                    ->assertDialogOpened('Please enter a comment');
+                    ->assertDialogOpened('Please enter a comment')
+                    ->acceptDialog();
         });
     }
 }

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->date('birthday');
             $table->string('nationality');
-            $table->string('imagereference')->nullable();
+            $table->string('imageReference')->nullable();
             $table->text('biography')->nullable();
         });
     }
