@@ -13,6 +13,8 @@ class Movie extends Model
 
     protected $fillable = ['id', 'name', 'imageReference', 'description', 'actors'];
 
+    public $timestamps = false;
+
     public function actors() {
         return $this->belongsToMany(Actor::class);
     }

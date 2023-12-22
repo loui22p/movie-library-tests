@@ -9,6 +9,8 @@ class DirectorsMovieRelation extends Model
 {
     // use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = 'directorsMovieRelations';
 
     protected $fillable = ['id', 'movieId', 'personId'];

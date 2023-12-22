@@ -12,7 +12,7 @@ class Comment extends Model
 
     protected $table = 'comments';
 
-    protected $fillable = ['movie', 'comment'];
+    protected $fillable = ['movieId', 'comment', 'user'];
 
     public function movie() {
         return $this->belongsTo(Movie::class, 'movieId');

@@ -26,10 +26,15 @@
 
         <?php
         if(isset($_GET['submit'])){
-            MoviepageController::insertComment($id, $_GET['comment']);
-            $url =  $movie->{'id'};
-            header('Location: http://localhost:8000/movie/'. $url);
-            exit;
+            if($_GET['comment']==''){
+                echo '<script>alert("Please enter a comment")</script>';
+            }else{
+                MoviepageController::insertComment($id, $_GET['comment']);
+                $url =  $movie->{'id'};
+                header('Location: http://localhost:8000/movie/'. $url);
+                exit;  
+            }
+            
         } 
         ?>
 
@@ -39,7 +44,7 @@
             <label for="coment">Join the discussion</label>
             <br>
             <input id="comment" name="comment" type="text" placeholder="Comment" size="60%" style="color: black">
-            <input type="submit" name="submit" value="Submit">
+            <input dusk="submit" type="submit" name="submit" value="Submit">
         </form>
         @endauth
         @endif
