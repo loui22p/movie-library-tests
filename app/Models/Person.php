@@ -11,7 +11,7 @@ class Person extends Model
 
     public $timestamps = false;
 
-    protected $Persons = 'Persons'; // Specify the table name if it's different from the model's name
+    protected $Persons = 'Persons'; 
 
     protected $column = ['id','name', 'imageReference', 'description'];
 }
